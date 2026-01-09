@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    
+    :root {
+      --bg: #f9f9f9;
+      --text: #222;
+      --primary: #af0fa7 ;
+      --card: #fff;
+    }
+    [data-theme="dark"] {
+      --bg: #121212;
+      --text: #f9f9f9;
+      --card: #1e1e1e;
+    }
+
+    * { margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+      scroll-behavior: smooth; 
+    }
+
+    html {
+     scroll-behavior: smooth;
+   }
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background: var(--bg); 
+     color: var(--text); 
+     line-height: 1.6; 
+    } 
+
+    header { 
+
+      position: fixed; 
+      width: 100%; top: 0; 
+      left: 0; background: var(--card); 
+      padding: 15px 30px; 
+      display: flex; 
+      flex-wrap: wrap;
+      justify-content: space-evenly; 
+      align-items: center; 
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+      z-index: 100; 
+    }
+
+    header h1 { 
+      font-size: 1.4rem; 
+      color: var(--primary);
+     }
+    nav ul { 
+      list-style: none; 
+      display: flex; 
+    }
+    nav ul li {
+       margin: 0 15px;
+       }
+    nav ul li a { 
+
+      color: var(--text);
+       text-decoration: none;
+        font-weight: bold; 
+        transition: 0.3s; 
+      }
+
+    nav ul li a:hover { 
+      color: var(--primary);
+     }
+    .toggle-btn { background: var(--primary); 
+      border: none; 
+      color: #fff; 
+      padding: 8px 15px; 
+      border-radius: 5px; 
+      cursor: pointer;
+     }
+.toggle-btn:hover{ 
+  background: #000000; 
+}
+
+    section { 
+      padding: 100px 20px; 
+      max-width: 1000px;
+       margin: auto; 
+    }
+
+    h2 { 
+      margin-bottom: 20px; 
+      font-size: 2rem; 
+      color: var(--primary); 
+    }
+
+    /* Hero */
+    .hero { 
+      height: 100vh; 
+      display: flex; 
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      text-align: center;
+     }
+    .hero h1 { 
+      font-size: 3rem; 
+    }
+    .hero p {
+       margin: 15px 0;
+       }
+        
+    .btn { 
+      display: inline-block;
+       margin-top: 20px; 
+       padding: 12px 25px; 
+       background: var(--primary); 
+       color: #fff; 
+       text-decoration: none; 
+       border-radius: 7px; 
+       transition: 0.3s; 
+      }
+
+    .btn:hover { 
+      background: #000000;
+     }
+
+    /* Projects */
+    .projects {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 20px; 
+    justify-items: stretch;
+    align-items: center;
+   }
+    .card {
+       background: var(--card); 
+       padding: 20px; 
+       border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+        transition: 0.3s; 
+      }
+    .card:hover { 
+      transform: translateY(-5px);
+     }
+
+    /* Contact */
+    .contact p { 
+      margin: 10px 0; 
+    }
+
+    footer { 
+      background: var(--card);
+       text-align: center; 
+       padding: 15px; 
+       margin-top: 30px; 
+      }
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BHAVYA</h1>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="toggle-btn" onclick="toggleTheme()">🌙 Mode</button>
+  </header>
+
+  <section id="hero" class="hero">
+    <h1>Hi, I'm BHAVYA</h1>
+    <p>Personalize  Website</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I enjoy building modern, responsive websites using HTML, CSS, and JavaScript.  
+    This portfolio showcases my journey as a beginner developer and my small projects to date.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>To-Do App</h3>
+        <p>A simple task manager built with JavaScript!</p>
+        <a href="todolist.html" class="btn">Live Demo</a>
+       </div>
+
+        <div class="card">
+        <h3>Typing speed test app</h3>
+        <p>A simple typing speed test app that test your accuracy!</p>
+        <a href="typingspeed.html" class="btn">Live Demo</a>
+       </div>
+
+       <div class="card">
+        <h3>Resume Builder</h3>
+        <p>Build Your resume by just Entering your details!</p>
+        <a href="resumebuilder.html" class="btn">Live Demo</a>
+       </div>
+
+    </div>
+
+     
+    
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: bhavyasachula07@email.com</p>
+    <p>GitHub: <a href="https://github.com/bhavyasachula" target="_blank">github.com/Bhavya Sachula</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/bhavya-sachula-40007521a/" target="_blank">linkedin.com/in/Bhavya Sachula</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 BHAVYA. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.dataset.theme =
+        document.body.dataset.theme === "dark" ? "light" : "dark";
+    }
+  </script>
+</body>
+</html>
